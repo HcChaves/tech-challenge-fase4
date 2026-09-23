@@ -1,3 +1,5 @@
+# necessario ter a chave gerada no google cloud, e setada no .env como GEMINI_API_KEY
+# mais detalhes no README.md
 import os
 from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
