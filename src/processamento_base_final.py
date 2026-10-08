@@ -1,6 +1,6 @@
 """
-Módulo de processamento de dados para a análise de comentários de avaliações.
-Carrega a base olist, aplica limpeza definida no EDA e salvca df final em parquet
+Módulo de processamento de dados para a análise de comentários.
+Carrega a base olist, aplica limpeza definida no EDA e salva df final em parquet
 """
 
 import re
