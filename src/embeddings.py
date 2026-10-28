@@ -10,6 +10,7 @@ import pandas as pd
 import re
 from pathlib import Path
 from tqdm import tqdm
+from langchain_core.embeddings import Embeddings
 
 REPO_NILC = "nilc-nlp/fasttext-skip-gram-300d"
 BASE_PROCESSADA = Path(r"data/processed/base_limpa_final.parquet")
@@ -99,6 +100,26 @@ def construir_embeddings() -> None:
     print(f"Normas dos vetores (min / max): {normas.min():.4f} / {normas.max():.4f}")
     print(f"Salvos em: {EMBEDDINGS_PATH} e {BASE_INDEXAVEL}")
 
+class NILCEmbeddings(Embeddings):
+    """
+    Adaptador que ensina o LangChain a usar o modelo NILC.
+    O contrato do LangChain exige dois métodos: um para documentos, outro para perguntas.
+    """
+
+    def __init__(self) -> None:
+        self.vetores, self.vocab = carregar_nilc()
+
+    def _vetorizar(self, texto: str) -> list[float]:
+        v = vetor_da_frase(texto, self.vetores, self.vocab)
+        if v is None:
+            raise ValueError(f"Texto sem nenhuma palavra no vocabulário NILC: {texto!r}")
+        return v.tolist()
+
+    def embed_documents(self, texts: list[str]) -> list[list[float]]:
+        return [self._vetorizar(t) for t in texts]
+
+    def embed_query(self, text: str) -> list[float]:
+        return self._vetorizar(text)   
 
 if __name__ == "__main__":
     construir_embeddings()
