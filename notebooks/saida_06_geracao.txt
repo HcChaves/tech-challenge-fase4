@@ -1,0 +1,213 @@
+==============================================================================================================
+PERGUNTA: Quais são os principais problemas relatados pelos clientes?
+Buscas geradas: ['Meu pedido atrasou demais para chegar', 'O produto veio quebrado dentro da caixa', 'Entregaram o modelo totalmente errado para mim', 'Parou de funcionar com três dias de uso', 'Suporte não responde e recusa o reembolso']
+
+RESPOSTA (tentativas: 1, fundamentada: True):
+**Produtos danificados ou com defeito**
+Foram encontradas avaliações sobre produtos ou embalagens entregues danificados, com marcas de uso ou que pararam de funcionar [E2][E4][E7][E9].
+
+**Recebimento de produto errado**
+Clientes relatam ter recebido produtos totalmente diferentes dos adquiridos [E3][E8].
+
+**Problemas com a entrega**
+Há relatos sobre atrasos na entrega e não recebimento dos pedidos [E1][E6][E10].
+
+**Dificuldades com cancelamento e reembolso**
+Foram registradas queixas sobre a falta de realização de reembolso e pedidos de cancelamento ignorados ou pendentes [E5][E6][E10].
+
+EVIDÊNCIAS CITADAS:
+  [E2] 1x | 1★×1 | a caixa do produto veio quebrada.
+        review_id: 46d22bfca604df5b0fd8e58962ecf0cb
+  [E4] 1x | 1★×1 | Recebi o produto com defeito, com marcas de uso e o carregamento precisou de mais de 2 horas para atingir 40% de carga
+        review_id: 45a86b05719c7c375b497c83a9837741
+  [E7] 1x | 2★×1 | O produto veio com várias partes quebradas dentro da caixa.
+        review_id: 4bb1ef78562973e974acec99a3272289
+  [E9] 1x | 1★×1 | O aparelho funcionou bem umas duas ou três vezes e depois começou apresentar irregularidade até deixar de funcionar por completo. Portanto, não recomendo a ninguém a aquisição de semelhante disposit
+        review_id: 06f44964e1e024d7772ae766434e88fa
+  [E3] 1x | 4★×1 | Enviaram o produto errado pra mim! Na loja virtual estava mostrando o produto original, eu comprei, e chegou um produto totalmente diferente! Quero outro, ou meu dinheiro de volta!!!
+        review_id: c96f5eea21a9526f823f64b99a9309a8
+  [E8] 1x | 1★×1 | Não recomendo pois meu pedido veio errado não foi o produto que comprei veio um totalmente diferente
+        review_id: f19cbe0a9f3a5a471807c5ba948ad9cb
+  [E1] 1x | 1★×1 | Quando meu pedido vai chegar?
+        review_id: 0ed830f7362c87cbe6fdbee7ba92e650
+  [E6] 1x | 1★×1 | Bom dia! Quero meu dinheiro de volta. Não vou mais querer o produto. Além de atrasado, já havia pedido o cancelamento do pedido e a americana está ignorando o mesmo. Agradeço providências.
+        review_id: f013172ceafae8286ca0394708dbc6e3
+  [E10] 1x | 1★×1 | Não recebi o produto e nem reembolso
+        review_id: f22e960aa1892ea63e5924cc0b999186
+  [E5] 1x | 2★×1 | Em 24/8 recebi email do marketplace stark informando que "o lojista não poderá atender ao pedido pois não há estoque disponível e realizariam o cancelamento e reembolso", o que ainda não ocorreu.
+        review_id: bb8aa38cb2e86fcaefd7290477da7fdc
+
+RECUPERADAS E NÃO CITADAS:
+==============================================================================================================
+PERGUNTA: Quais reclamações estão relacionadas à entrega?
+Buscas geradas: ['O pedido atrasou quase um mês', 'Consta entregue mas não chegou nada', 'Caixa veio toda amassada e rasgada', 'Entregador foi muito grosso e mal-educado', 'Não recebi meu produto até hoje']
+
+RESPOSTA (tentativas: 1, fundamentada: True):
+- **Atraso e não recebimento do pedido**: Foram encontradas reclamações sobre produtos que não foram entregues ou que estão com grande atraso [E1][E5][E6][E10].
+- **Falsa confirmação de entrega**: Há relatos de que consta no sistema que o produto foi entregue, mas ele não chegou [E2][E7].
+- **Falha no rastreamento**: Houve queixa sobre falhas no sistema de rastreamento do pedido [E1].
+- **Embalagem e produto danificados**: Clientes relataram ter recebido produtos com caixas amassadas, violadas, rasgadas ou molhadas [E3][E8].
+- **Mal comportamento do entregador**: Foi relatada falta de educação por parte do entregador [E4].
+
+EVIDÊNCIAS CITADAS:
+  [E1] 1x | 1★×1 | DEMORA!!!!!!! FALHA NO RASTREAMENTO!!!! Fiz o pedido a um mês e até agora nada
+        review_id: 7bae1f3a87b2ab9b0c30f5e6fa08d9fc
+  [E5] 2x | 1★×2 | Até hoje não recebi meu produto
+        review_id: c0302c7f4f2ffbad5b0b88dd5dae6170, cea4c708aa3af55f226f8a492d24791e
+  [E6] 1x | 1★×1 | já está com quase um mês que fiz o pedido e o produto ainda não chegou.
+        review_id: 724539bf8668b7cf318df67996dc8718
+  [E10] 1x | 1★×1 | Até agora não recebi meu produto
+        review_id: 2bb9b793497d3d339c9678e18909598e
+  [E2] 1x | 1★×1 | CONSTA QUE FOI ENTREGUE MAS NÃO CHEGOU NADA
+        review_id: 8094797660b57a0099a766bb217303ae
+  [E7] 1x | 1★×1 | Consta que foi entregue mas não recebi
+        review_id: 9dfa8df09b6490ba7638b24d6e7feeef
+  [E3] 1x | 1★×1 | Recebi o perfume violado, aberto, caixa toda amassada embalagem de fora rasgada e amassada, o plástico bolha estava todo furado e muito amassado, a caixa estava toda molhada de perfume e tenho fotos.
+        review_id: cbbf7228900cd55a42ab2d3ff94691f8
+  [E8] 1x | 1★×1 | O produto chegou com a caixa amassada
+        review_id: 2e4bd919c76bcd73e742995054200e4c
+  [E4] 1x | 4★×1 | Infelizmente a pessoa que fez a entrega,muito mal educado.
+        review_id: 63b5472db30a6baeccdd4086129ff63b
+
+RECUPERADAS E NÃO CITADAS:
+  [E9] A loja foi muito atenciosa, veio muito bem embrulhado, fiquei assustado com a rapidez na entrega, muito bom.
+==============================================================================================================
+PERGUNTA: O que os clientes mais elogiam nos produtos?
+Buscas geradas: ['Material de excelente qualidade muito resistente', 'Ótimo custo benefício vale cada centavo', 'Produto lindo exatamente como nas fotos', 'Funciona perfeitamente atendeu minhas expectativas', 'Acabamento impecável veio muito bem embalado']
+
+RESPOSTA (tentativas: 1, fundamentada: True):
+**Qualidade do material e acabamento**
+Os clientes elogiam a qualidade do material e o acabamento do produto [E1][E6][E10].
+
+**Aparência e fidelidade às fotos**
+Destaca-se a beleza dos produtos e a fidelidade em relação às fotos apresentadas [E3][E8].
+
+**Atendimento às expectativas**
+Há relatos de que o produto atendeu plenamente às expectativas dos compradores [E4][E9].
+
+**Custo-benefício**
+O valor gasto e o custo-benefício do produto foram avaliados positivamente [E2][E7].
+
+**Embalagem e entrega**
+Os clientes elogiam a entrega realizada antes do prazo e o cuidado com a embalagem [E5][E10].
+
+EVIDÊNCIAS CITADAS:
+  [E1] 1x | 5★×1 | Material de excelente qualidade!
+        review_id: 3e61a323e4c76dd58807455c693cc6d7
+  [E6] 1x | 5★×1 | muito bom produto, material de qualidade
+        review_id: 09b80dcf6b56845dd7222a9fd5b40743
+  [E10] 1x | 5★×1 | Veio bem antes do prazo, bem embalado, ótimo acabamento...
+        review_id: 8b472df399a31c7d0e08262e0d1f59ce
+  [E3] 1x | 4★×1 | Bonito, exatamente como a foto.
+        review_id: 7b91a389b1959647b77e8f55a028545d
+  [E8] 1x | 5★×1 | Amei o produto! Lindo como na foto!
+        review_id: 472bd820c924834c253b9309dadbd4ab
+  [E4] 1x | 5★×1 | Atendeu plenamente minhas expectativas.
+        review_id: 8e5961cd3b868a3b8382f19b52fc8135
+  [E9] 6x | 4★×1, 5★×5 | Atendeu minhas expectativas
+        review_id: ceb8edcfc6a17b16926b7c9acb47abcf, 1439b27a7ce21f589287a435b27f3193 (+4)
+  [E2] 1x | 5★×1 | Ótimo produto vale cada centavo
+        review_id: 0169dcd326e9cf2ec4694b98aa454b03
+  [E7] 6x | 4★×2, 5★×4 | Ótimo custo-benefício
+        review_id: 42ae74a43661be8587b2e2db054179db, accbc4ba53c6e7bc3bdbe4e5e7482649 (+4)
+  [E5] 1x | 5★×1 | produto excelente chegou perfeito muito bem embalado
+        review_id: f218988972c6156ec961f3fdfa877cda
+
+RECUPERADAS E NÃO CITADAS:
+==============================================================================================================
+PERGUNTA: Quais problemas aparecem nas avaliações de clientes insatisfeitos?
+Buscas geradas: ['A entrega atrasou muito dessa vez', 'O produto chegou totalmente quebrado', 'Atendimento ao cliente é muito ruim', 'Veio o produto totalmente errado', 'Material de péssima qualidade não recomendo', 'Tive problemas para pedir o reembolso']
+
+RESPOSTA (tentativas: 1, fundamentada: True):
+**Atraso na entrega**
+Foram encontradas avaliações relatando atraso na entrega dos produtos [E1][E7].
+
+**Produto quebrado**
+Há relatos de clientes que receberam o produto quebrado [E2][E8].
+
+**Envio de produto errado**
+Foram registradas queixas sobre o recebimento de produtos errados [E4][E10].
+
+**Não recebimento do produto, problemas com reembolso e atendimento**
+Há avaliações apontando o não recebimento do produto, falta de reembolso e atendimento ruim [E6][E9].
+
+**Má qualidade do produto**
+Foram encontradas reclamações apontando a péssima qualidade do produto [E5].
+
+EVIDÊNCIAS CITADAS:
+  [E1] 1x | 1★×1 | Vem atrasando muito na entrega isso não é a primeira vez.
+        review_id: 6d132c4ab82173eda84b7306e95ba98c
+  [E7] 1x | 3★×1 | O prazo da entrega era grande e caro... Agora atrasar a entrega foi a primeira vez. 👎
+        review_id: 0b222769884e6b028db6293cb53c8775
+  [E2] 2x | 1★×2 | O produto chegou quebrado
+        review_id: 43bf7d48ee35e1ef767b97badbbe7cd7, 85d756e4f54d11953b9a055b6d3a6bd5
+  [E8] 1x | 1★×1 | o produto veio quebrado
+        review_id: 1f9abf59f4b7b1ccfcb945f669ffad9a
+  [E4] 1x | 1★×1 | O produto enteque veio Errado
+        review_id: 83796cb2312caca571fe0261e148e1df
+  [E10] 3x | 1★×1, 3★×2 | O produto veio errado
+        review_id: d907d8efa369884f251224667fca2d28, f3391b83c48e1ff67d0f06f27d4f86b5 (+1)
+  [E6] 1x | 1★×1 | Não recebi o produto e também não tive reembolso
+        review_id: 15c8f3b3ff412d0f8d6b72053335fd0b
+  [E9] 1x | 1★×1 | Não recebi o produto é o atendimento da Shoptaime é ruim.
+        review_id: 5269ffe8ebfd4ea5bf1364458f36ac03
+  [E5] 1x | 1★×1 | Produto de péssima qualidade,não recomendo.
+        review_id: ec41c90a20ef732dee52c014138bdcde
+
+RECUPERADAS E NÃO CITADAS:
+  [E3] Muito bom o atendimento ,e muito seguro e grande confiabilidade , fui um atendimento vip.
+==============================================================================================================
+PERGUNTA: Existem padrões de reclamação sobre a qualidade dos produtos?
+Buscas geradas: ['Material muito fraco e vagabundo', 'Produto quebrou no primeiro uso', 'Acabamento péssimo cheio de defeitos', 'Qualidade muito inferior às fotos', 'Não durou nem uma semana']
+
+RESPOSTA (tentativas: 1, fundamentada: True):
+Material fraco e fragilidade
+Foram encontradas avaliações relatando que os produtos possuem material fraco [E1][E6] e que quebram ou soltam peças logo no primeiro dia de uso [E2][E7].
+
+Acabamento ruim e defeitos de fabricação
+Há reclamações sobre péssima qualidade geral [E2][E3], com acabamentos grosseiros, parafusos defeituosos que dificultam o encaixe [E3] e presença de defeitos nos produtos [E8].
+
+Qualidade inferior ao anunciado
+Existem relatos de que a qualidade dos itens é inferior à apresentada nas imagens [E4], com materiais muito finos [E9], além de produtos entregues diferentes do oferecido [E8].
+
+EVIDÊNCIAS CITADAS:
+  [E1] 1x | 1★×1 | Material muito fraco
+        review_id: 8a47eab7ea3060310319c51f274603d7
+  [E6] 1x | 4★×1 | O produto um pouco fraco,mas muito bonito
+        review_id: 4c6e652b22c0f6990c4ba2a74e52fa72
+  [E2] 1x | 1★×1 | Qualidade do produto péssima. Na primeira vez que fui conectar o produto no meu tablet o produto quebrou dentro. Agora fiquei no prejuízo.
+        review_id: ff17032b0a7a64ad2fee6c9aa21cc0a1
+  [E7] 1x | 4★×1 | O produto pelo valor ok apesar de já no primeiro dia de uso a Correia soltou.....
+        review_id: 42df4a9a31b08aa5d16c6898504da82d
+  [E3] 1x | 2★×1 | O produto é lindo, porém é de péssima qualidade. os acabamentos são grosseiros, os parafusos para encaixe tem defeitos e não encaixam corretamente, enfim, é bonito mas péssimo em acabamento e montagem
+        review_id: 1f76168d64114654d52b821d45c86804
+  [E8] 1x | 1★×1 | Produto diferente do oferecido, e cheio de defeitos.
+        review_id: 893659b7a097572978ae507c5aba896c
+  [E4] 1x | 1★×1 | Qualidade inferior ao mostrado nas imagens!
+        review_id: b8014be250a0c7bb3d5ef03ffec4fdac
+  [E9] 1x | 1★×1 | toalhas muito finas, qualidade inferior
+        review_id: 588e7f1da48db91361c8453ee8cd8983
+
+RECUPERADAS E NÃO CITADAS:
+  [E5] Boa qualidade, chegou mais de uma semana antes do prazo, até agora não deu qualquer problema.
+  [E10] Palhaçada mais de um mês é ainda não chegou, deram um prazo mas já passou faz tempo e nada. É o pior é que já paguei indignada.
+==============================================================================================================
+PERGUNTA: Qual foi o desempenho financeiro da Olist em 2018?
+Buscas geradas: ['faturamento das vendas subiu muito em 2018', 'lucro excelente vendendo pela olist', 'repasse do dinheiro foi no prazo', 'taxa de comissão valeu a pena', 'crescimento de vendas superou a expectativa']
+
+RESPOSTA (tentativas: 1, fundamentada: True):
+Não há evidências suficientes nas avaliações para responder a esta pergunta.
+
+EVIDÊNCIAS CITADAS:
+
+RECUPERADAS E NÃO CITADAS:
+  [E1] O produto chegou dentro do prazo, o preço estava ótimo em comparação com outras lojas.
+  [E2] Produto de excelente qualidade. Obrigado pela venda!
+  [E3] O produto foi entregue bem antes do prazo estipulado no ato da compra.
+  [E4] Apesar da demora, valeu a pena esperar!😍
+  [E5] Produto e entrega superou a expectativa.
+  [E6] Em mais uma compra na lannister.com fico muito satisfeito com o produto, valor e prazo de entrega que superaram minhas expectativas, pois chegou bem antes do previsto. Os parceiros da Amer. São show!
+  [E7] Excelente compra e excelente produto
+  [E8] Solicitei o cancelamento da compra dentro do prazo de 07 dias (conforme rege o código de defesa do consumidor) e o cancelamento não foi efetuado, produto não entregue e o pagamento não foi estornado.
+  [E9] valeu a pena entrega antes do prazo eu super recomendo
+  [E10] Superou a expectativa!!!
