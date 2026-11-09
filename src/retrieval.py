@@ -146,7 +146,12 @@ def recuperar_multiconsulta(
     Retorna (consultas geradas, evidências).
     """
     consultas = expandir_pergunta(pergunta, llm)
-    rankings = [_buscar_e_agrupar(store, c, candidatos_por_consulta) for c in consultas]
+    rankings = []
+    for c in consultas:
+        try:
+            rankings.append(_buscar_e_agrupar(store, c, candidatos_por_consulta))
+        except ValueError:  # busca sem nenhuma palavra do vocabulário NILC: ignora
+            rankings.append([])
 
     escolhidas: dict[str, Evidencia] = {}
     for posicao in range(max(len(r) for r in rankings)):

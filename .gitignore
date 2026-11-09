@@ -7,3 +7,4 @@ __pycache__/
 data/processed/
 data/chroma/
 notebooks/saida_*.txt
+data/cache_llm/

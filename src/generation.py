@@ -9,14 +9,8 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 
 from src.context import Contexto, validar_citacoes
+from src.mensagens import MENSAGEM_FALHA, MENSAGEM_QUANTITATIVA, MENSAGEM_SEM_EVIDENCIA
 from src.retrieval import Evidencia
-
-MENSAGEM_SEM_EVIDENCIA = (
-    "Não há evidências suficientes nas avaliações para responder a esta pergunta."
-)
-MENSAGEM_FALHA = (
-    "Não foi possível gerar uma resposta fundamentada nas avaliações recuperadas."
-)
 
 MENSAGEM_SISTEMA = f"""Você é um analista de Voz do Cliente. Responda à PERGUNTA usando \
 EXCLUSIVAMENTE as avaliações de clientes fornecidas entre as tags <avaliacoes>.
@@ -38,7 +32,9 @@ busca, não a frequência real do tema na base. Não afirme qual problema é o "
 "mais frequente"; diga que foram encontradas avaliações sobre o tema.
 7. Se as avaliações não forem suficientes para responder, responda SOMENTE com esta frase, \
 sem nenhuma formatação: "{MENSAGEM_SEM_EVIDENCIA}"
-8. Responda em português do Brasil, de forma concisa.
+8. Se a PERGUNTA pedir contagens, médias, percentuais ou outras estatísticas sobre as \
+avaliações, responda SOMENTE com esta frase, sem nenhuma formatação: "{MENSAGEM_QUANTITATIVA}"
+9. Responda em português do Brasil, de forma concisa.
 
 FORMATO (siga exatamente):
 - Escreva de 1 a 6 temas, um por linha, cada linha começando com "- ".
@@ -63,7 +59,7 @@ class Resposta:
     citadas: dict[str, Evidencia]       # E# -> evidências realmente citadas
     nao_citadas: dict[str, Evidencia]   # recuperadas, mas não usadas na resposta
     citacoes_invalidas: list[str]
-    sem_evidencia: bool                 # a LLM (ou o sistema) declarou falta de evidência
+    sem_evidencia: bool                 # a LLM declarou falta de evidência
     fundamentada: bool                  # passou na verificação de citações
     tentativas: int
     texto_bruto: str                    # última saída da LLM, para depuração e avaliação
@@ -84,12 +80,18 @@ def _montar(texto, contexto, validas, invalidas, sem_evidencia, fundamentada, te
     )
 
 
+def resposta_recusa(texto: str, contexto: Contexto | None = None) -> Resposta:
+    """Resposta de recusa (sem citações), usada pelas barreiras em código."""
+    contexto = contexto or Contexto(texto="", evidencias={})
+    return _montar(texto, contexto, [], [], True, True, 0, "")
+
+
 def gerar_resposta(
     pergunta: str, contexto: Contexto, llm, max_tentativas: int = 2
 ) -> Resposta:
     """Gera a resposta com o LLM e verifica as citações; refaz uma vez se a verificação falhar."""
     if not contexto.evidencias:
-        return _montar(MENSAGEM_SEM_EVIDENCIA, contexto, [], [], True, True, 0, "")
+        return resposta_recusa(MENSAGEM_SEM_EVIDENCIA, contexto)
 
     cadeia = PROMPT | llm | StrOutputParser()
     aviso = ""
@@ -102,6 +104,8 @@ def gerar_resposta(
 
         if MENSAGEM_SEM_EVIDENCIA in bruto:
             return _montar(MENSAGEM_SEM_EVIDENCIA, contexto, [], [], True, True, tentativa, bruto)
+        if MENSAGEM_QUANTITATIVA in bruto:
+            return _montar(MENSAGEM_QUANTITATIVA, contexto, [], [], True, True, tentativa, bruto)
 
         validas, invalidas = validar_citacoes(bruto, contexto)
         if validas and not invalidas:
