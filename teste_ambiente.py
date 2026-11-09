@@ -15,6 +15,6 @@ print(f"Chave carregada: {chave[:6]}... (tamanho: {len(chave)})")
 llm = ChatGoogleGenerativeAI(model="gemini-3.6-flash", google_api_key=chave)
 
 # Faz uma chamada simples pra validar a conexão
-resposta = llm.invoke("Responda em uma frase: o que é RAG?")
+resposta = llm.invoke("Responda em uma frase: o que é uma llm?")
 print("\nResposta do Gemini:")
 print(resposta.content)
