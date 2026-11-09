@@ -308,9 +308,9 @@ Note que "Frete muito caro" aparece em 6 avaliações, com notas de 1 a 5: a **n
 
 1. **Polaridade e negação.** Embeddings de média de palavras aproximam "péssimo" de "ótimo" e tratam "não recomendo" como parecido com "recomendo". Mitigamos com a reescrita em buscas polarizadas e com a LLM ignorando evidências que não respondem à pergunta, mas ainda houve 2 resultados fora de lugar em 50 na análise de busca.
 2. **A Camada 1 é frágil.** O piso de 0,70 foi calibrado com apenas 16 perguntas e vale para o vocabulário das avaliações. Perguntas fora do escopo com palavras comuns ("quanto a ação do bradesco caiu nesta semana?", similaridade 0,839) passam por ela. **A barreira real é a LLM**, com as camadas 0 e 3 como reforço.
-5. **Falta de determinismo.** O Gemini gera buscas e respostas ligeiramente diferentes entre execuções, mesmo com temperatura 0. O cache em disco (`data/cache_llm/`) torna uma execução repetível.
-7. **Cota do plano gratuito.** Cada pergunta nova gasta 2 chamadas ao Gemini e leva cerca de 30 segundos por causa do limite por minuto.
-8. **Viés da base.** Só 41,3% das avaliações têm texto, e quem comenta reclama mais. 89 comentários com erros de digitação foram descartados por falta de vocabulário, e não há tratamento para erros de digitação dentro de comentários maiores.
+3. **Falta de determinismo.** O Gemini gera buscas e respostas ligeiramente diferentes entre execuções, mesmo com temperatura 0. O cache em disco (`data/cache_llm/`) torna uma execução repetível.
+4. **Cota do plano gratuito.** Cada pergunta nova gasta 2 chamadas ao Gemini e leva cerca de 30 segundos por causa do limite por minuto.
+5. **Viés da base.** Só 41,3% das avaliações têm texto, e quem comenta reclama mais. 89 comentários com erros de digitação foram descartados por falta de vocabulário, e não há tratamento para erros de digitação dentro de comentários maiores.
 
 **Desafio adicional (metadados).** Os metadados (nota, data, `order_id`) são guardados no Chroma para **rastreabilidade**, mas **não usamos filtros por metadado**.
 
